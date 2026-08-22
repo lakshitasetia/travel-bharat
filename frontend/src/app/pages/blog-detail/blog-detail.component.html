@@ -1,0 +1,59 @@
+<ng-container *ngIf="story() as s; else notFound">
+  <article class="post" data-testid="blog-detail">
+    <header class="post-hero">
+      <div class="container narrow">
+        <p class="eyebrow">{{ s.category }}</p>
+        <h1>{{ s.title }}</h1>
+        <p class="dek">{{ s.excerpt }}</p>
+        <div class="meta">
+          <span>By {{ s.author }}</span><span>·</span><span>{{ s.date }}</span><span>·</span><span>{{ s.readTime }}</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="hero-image image-wrap">
+      <img [src]="s.image" [alt]="s.title"/>
+    </div>
+
+    <section class="body">
+      <div class="container narrow">
+        <p *ngFor="let p of s.body" appReveal>{{ p }}</p>
+        <blockquote class="pull-quote" appReveal>The country moves. Travel Bharat writes it down.</blockquote>
+        <p appReveal>Read this issue's companion features in the digital edition of Travel Bharat, available inside the January 2026 magazine.</p>
+
+        <div class="tags" appReveal>
+          <a routerLink="/blogs" class="tag">#{{ s.category }}</a>
+          <a routerLink="/blogs" class="tag">#TravelBharat</a>
+          <a routerLink="/blogs" class="tag">#VandeBharat</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related" *ngIf="related().length">
+      <div class="container">
+        <div class="section-head" appReveal>
+          <p class="eyebrow">Continue Reading</p>
+          <h2>More from {{ s.category }}.</h2>
+        </div>
+        <div class="rel-grid">
+          <a *ngFor="let r of related()" [routerLink]="['/blogs', r.slug]" class="rel-card" appReveal>
+            <div class="image-wrap"><img [src]="r.image" [alt]="r.title"/></div>
+            <p class="cat">{{ r.category }}</p>
+            <h3>{{ r.title }}</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+</ng-container>
+
+<ng-template #notFound>
+  <section class="not-found" data-testid="blog-not-found">
+    <div class="container narrow">
+      <p class="eyebrow">404</p>
+      <h1>This story hasn't been filed yet.</h1>
+      <p>The article you're looking for may have been moved to the archive or is coming in the next issue.</p>
+      <a routerLink="/blogs" class="btn">Back to All Stories</a>
+    </div>
+  </section>
+</ng-template>

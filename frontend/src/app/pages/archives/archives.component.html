@@ -1,0 +1,38 @@
+<section class="page-hero" data-testid="archives-hero">
+  <div class="container">
+    <p class="eyebrow">Back Issues</p>
+    <h1>The Travel Bharat <em>Archive</em>.</h1>
+    <p class="sub">Every issue, every story — a growing record of India's journeys.</p>
+  </div>
+</section>
+
+<section class="archive" *ngFor="let y of years" [attr.data-testid]="'archive-year-' + y.year">
+  <div class="container">
+    <div class="year-head" appReveal>
+      <h2 class="year">{{ y.year }}</h2>
+      <span class="year-count">{{ y.issues.length }} Issues</span>
+    </div>
+
+    <div class="grid">
+      <article *ngFor="let i of y.issues" class="issue" appReveal [attr.data-testid]="'issue-' + i.id">
+        <div class="cover image-wrap"><img [src]="i.cover" [alt]="i.title"/></div>
+        <p class="num">{{ i.number }} · {{ i.date }}</p>
+        <h3>{{ i.title }}</h3>
+        <p class="desc">{{ i.description }}</p>
+        <div class="issue-cta">
+          <a href="#" class="link-arrow">Read Issue <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#" class="dl" aria-label="Download PDF"><i class="fa-solid fa-download"></i></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="empty-hint">
+  <div class="container narrow" appReveal>
+    <p class="eyebrow">Coming Soon</p>
+    <h2>More issues arriving every month.</h2>
+    <p>Travel Bharat publishes on the first of each month. New editions are added to the archive as they leave the press.</p>
+    <a routerLink="/magazine" class="btn">See The Latest</a>
+  </div>
+</section>

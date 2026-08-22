@@ -1,0 +1,93 @@
+<section class="page-hero" data-testid="about-hero">
+  <div class="container">
+    <p class="eyebrow">The Publication</p>
+    <h1>About <em>Travel Bharat</em>.</h1>
+    <p class="sub">A new-age onboard reading experience — crafted for the way modern India travels.</p>
+  </div>
+</section>
+
+<section class="intro-block">
+  <div class="container narrow" appReveal>
+    <p class="lede">Travel Bharat is a premium onboard lifestyle and travel magazine designed exclusively for passengers of India's flagship semi high-speed trains.</p>
+    <p class="body">Curated for today's discerning traveller, the magazine blends travel, culture, business, hospitality, technology, automobiles, wellness, and luxury lifestyle into one engaging reading experience.</p>
+    <p class="body">More than just a magazine, Travel Bharat is a platform that celebrates the spirit of modern India — its destinations, innovation, people, and stories — while enhancing the journey experience for rail passengers across the country.</p>
+  </div>
+</section>
+
+<section class="image-break" data-testid="about-image-break">
+  <img src="https://images.unsplash.com/photo-1587922546925-b09b18a01c65?w=2400&q=85" alt="India through the window of a train"/>
+</section>
+
+<section class="vision">
+  <div class="container split">
+    <div appReveal>
+      <p class="eyebrow">Our Vision</p>
+      <h2>A publication that moves with the country.</h2>
+    </div>
+    <div appReveal>
+      <p class="body">To redefine onboard engagement by creating a sophisticated, informative, and visually rich publication that reflects the aspirations of contemporary India and the evolving experience of rail travel.</p>
+      <blockquote class="pull-quote">Every journey should inspire, inform, and connect the traveller to the stories of the country moving past their window.</blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="distribution">
+  <div class="container">
+    <div class="dist-grid">
+      <div appReveal>
+        <p class="eyebrow">Distribution &amp; Presence</p>
+        <h2>Where we're read.</h2>
+        <p class="body">Travel Bharat is strategically distributed onboard premium train services, ensuring direct access to a focused and high-value audience throughout their journey.</p>
+        <p class="body">Positioned within a distraction-free travel environment, the magazine enjoys extended reader attention and strong engagement.</p>
+        <p class="body">With expansion plans across major premium rail corridors, Travel Bharat is envisioned as one of India's most influential onboard media platforms.</p>
+      </div>
+      <div class="dist-visual" appReveal>
+        <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=1200&q=85" alt="Indian railway"/>
+        <div class="dist-stat">
+          <strong>8h+</strong>
+          <span>Avg. reader dwell time</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="platform">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <p class="eyebrow">The Advertising Advantage</p>
+      <h2>A powerful advertising platform.</h2>
+    </div>
+    <div class="platform-grid">
+      <p class="body" appReveal>Travel Bharat offers brands a unique opportunity to connect with affluent travellers, corporate professionals, entrepreneurs, tourists, and decision-makers in an immersive and premium setting.</p>
+      <p class="body" appReveal>Unlike conventional media, onboard visibility creates uninterrupted brand exposure, enabling advertisers to engage with readers in a relaxed and attentive environment during travel.</p>
+    </div>
+  </div>
+</section>
+
+<section class="whys">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <p class="eyebrow">Why Travel Bharat</p>
+      <h2>Five reasons brands trust us.</h2>
+    </div>
+    <ol class="why-list">
+      <li *ngFor="let w of whys; let i = index" appReveal>
+        <span class="n">{{ (i+1).toString().padStart(2,'0') }}</span>
+        <span class="t">{{ w }}</span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="more-than">
+  <div class="container narrow" appReveal>
+    <p class="eyebrow">More Than A Magazine</p>
+    <h2>Travel Bharat is an experience-led media platform built around the idea that journeys should inspire, inform, and connect people with the stories of India.</h2>
+    <p class="body">Every issue is crafted to make travel more meaningful while offering brands a prestigious space to be seen and remembered.</p>
+    <div class="cta-row">
+      <a routerLink="/advertise" class="btn" data-testid="about-cta-advertise">Advertise With Us</a>
+      <a routerLink="/magazine" class="btn ghost" data-testid="about-cta-magazine">Explore The Magazine</a>
+    </div>
+  </div>
+</section>

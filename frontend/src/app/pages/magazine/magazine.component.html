@@ -1,0 +1,62 @@
+<section class="page-hero" data-testid="magazine-hero">
+  <div class="container">
+    <p class="eyebrow">Digital Editions</p>
+    <h1>The <em>Magazine</em>.</h1>
+    <p class="sub">Stories that make the journey worth taking.</p>
+  </div>
+</section>
+
+<section class="featured">
+  <div class="container feat">
+    <div class="cover" appReveal>
+      <img [src]="featured.cover" [alt]="featured.title"/>
+      <div class="badge">Latest</div>
+    </div>
+    <div class="copy" appReveal>
+      <p class="eyebrow">{{ featured.number }} · {{ featured.date }}</p>
+      <h2>{{ featured.title }}.</h2>
+      <div class="rule"></div>
+      <p class="lede">{{ featured.description }}</p>
+      <p class="body">This edition takes you along the Vande Bharat corridor from New Delhi to Mata Vaishno Devi Katra — a journey of eight hours through Punjab's plains, Jammu's foothills and India's newest engineering marvels.</p>
+      <div class="meta">
+        <div><span>Issue</span><strong>{{ featured.number }}</strong></div>
+        <div><span>Published</span><strong>{{ featured.date }}</strong></div>
+        <div><span>Pages</span><strong>96</strong></div>
+      </div>
+      <div class="cta-row">
+        <a href="#" class="btn" data-testid="magazine-read-digital">Read Digital Edition</a>
+        <a href="#" class="btn ghost" data-testid="magazine-download">Download Issue</a>
+      </div>
+      <p class="note">Digital edition coming soon — placeholder for now.</p>
+    </div>
+  </div>
+</section>
+
+<section class="recent">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <p class="eyebrow">Recent Issues</p>
+      <h2>The last few months.</h2>
+    </div>
+    <div class="recent-grid">
+      <a *ngFor="let i of recent" routerLink="/archives" class="recent-card" appReveal [attr.data-testid]="'mag-' + i.id">
+        <div class="image-wrap"><img [src]="i.cover" [alt]="i.title"/></div>
+        <p class="cat">{{ i.number }} · {{ i.date }}</p>
+        <h3>{{ i.title }}</h3>
+        <p class="ex">{{ i.description }}</p>
+      </a>
+    </div>
+    <div class="all-cta" appReveal>
+      <a routerLink="/archives" class="btn ghost" data-testid="magazine-all-archives">View All Archives</a>
+    </div>
+  </div>
+</section>
+
+<section class="subscribe">
+  <div class="container narrow" appReveal>
+    <p class="eyebrow" style="color:#E8B77B">Never Miss An Issue</p>
+    <h2>The next edition is boarding.</h2>
+    <p>Each issue of Travel Bharat is designed to travel with you. Discover the country, one journey at a time.</p>
+    <a routerLink="/contact" class="btn light" data-testid="magazine-subscribe-cta">Enquire About Subscription</a>
+  </div>
+</section>

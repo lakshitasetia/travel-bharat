@@ -1,0 +1,113 @@
+<section class="page-hero" data-testid="advertise-hero">
+  <div class="hero-media">
+    <img src="https://images.unsplash.com/photo-1528543606781-2f6e6857f318?w=2400&q=85" alt="Interior of a premium train"/>
+    <div class="overlay"></div>
+  </div>
+  <div class="container hero-inner">
+    <p class="eyebrow" style="color:#E8B77B">For Brands</p>
+    <h1>Take your brand <em>further</em>.</h1>
+    <p class="sub">Reach decision-makers where attention matters.</p>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="container narrow" appReveal>
+    <p class="lede">Travel Bharat is a premium bilingual onboard magazine available to passengers travelling on one of India's most prestigious Vande Bharat Express routes.</p>
+  </div>
+</section>
+
+<section class="why">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <p class="eyebrow">Why Advertise With Travel Bharat</p>
+      <h2>An uncluttered space for uncommon attention.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card" *ngFor="let r of reasons; let i = index" appReveal [attr.data-testid]="'reason-' + i">
+        <span class="idx">{{ (i+1).toString().padStart(2,'0') }}</span>
+        <h3>{{ r.title }}</h3>
+        <p>{{ r.copy }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="audience">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <p class="eyebrow">Premium Passenger Profile</p>
+      <h2>Who reads Travel Bharat.</h2>
+    </div>
+    <div class="aud-wrap" appReveal>
+      <span *ngFor="let a of audience">{{ a }}</span>
+    </div>
+  </div>
+</section>
+
+<section class="train" data-testid="advertise-train">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <p class="eyebrow">Train Profile</p>
+      <h2>MVDK — NDLS Vande Bharat Express.</h2>
+      <p class="lede-line">22477 · NDLS → MVDK &nbsp;&nbsp;|&nbsp;&nbsp; 22478 · MVDK → NDLS</p>
+    </div>
+
+    <div class="route" appReveal>
+      <div class="route-line"></div>
+      <div class="stops">
+        <div class="stop" *ngFor="let s of route; let i = index">
+          <span class="dot"></span>
+          <p class="short">{{ s.short }}</p>
+          <p class="full">{{ s.name }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="train-stats" appReveal>
+      <div><strong>655 KM</strong><span>Distance</span></div>
+      <div><strong>8h 15m – 8h 30m</strong><span>Journey Time</span></div>
+      <div><strong>20</strong><span>Total Coaches</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="market">
+  <div class="container split" appReveal>
+    <div>
+      <p class="eyebrow">Audience Reach</p>
+      <h2>A unique market.</h2>
+    </div>
+    <div>
+      <p class="lede">Serving North India's most influential travel corridor — connecting Punjab, Haryana and Delhi NCR.</p>
+      <div class="mini-stats">
+        <div><strong>3</strong><span>States Covered</span></div>
+        <div><strong>7</strong><span>Key Stops</span></div>
+        <div><strong>2,00,000+</strong><span>Monthly Readers</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ad-cats">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <p class="eyebrow">Advertising Categories</p>
+      <h2>Brands we work with.</h2>
+    </div>
+    <div class="cat-grid">
+      <div class="cat" *ngFor="let c of categories" appReveal>{{ c }}</div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="container narrow" appReveal>
+    <p class="eyebrow" style="color:#E8B77B">Get In Touch</p>
+    <h2>Position your brand where attention matters.</h2>
+    <p class="body">In a world dominated by fleeting digital impressions, Travel Bharat offers something increasingly rare — focused attention.</p>
+    <div class="cta-row">
+      <a routerLink="/contact" class="btn light" data-testid="advertise-cta-mediakit">Request Media Kit</a>
+      <a routerLink="/contact" class="btn ghost" style="color:var(--paper); border-color: var(--paper);" data-testid="advertise-cta-contact">Contact Us</a>
+    </div>
+  </div>
+</section>

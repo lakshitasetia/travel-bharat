@@ -1,0 +1,150 @@
+<!-- HERO -->
+<section class="hero" data-testid="home-hero">
+  <div class="hero-media">
+    <img src="https://images.unsplash.com/photo-1544413660-299165566b1d?w=2400&q=85" alt="Vande Bharat Express passing through India" />
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="container hero-inner">
+    <p class="eyebrow fade-up" data-testid="hero-eyebrow">Onboard · Vande Bharat Express</p>
+    <h1 class="hero-title fade-up d-1">Travel <em>Bharat</em>.</h1>
+    <p class="hero-lede fade-up d-2">Every Journey Has A Story.</p>
+    <p class="hero-sub fade-up d-3">India's premium onboard travel &amp; lifestyle magazine — celebrating destinations, culture, business, technology and the country in motion.</p>
+    <div class="hero-cta fade-up d-4">
+      <a routerLink="/magazine" class="btn light" data-testid="hero-cta-magazine">Explore The Magazine</a>
+      <a routerLink="/advertise" class="btn ghost" style="color:var(--paper); border-color: var(--paper);" data-testid="hero-cta-advertise">Advertise With Us</a>
+    </div>
+  </div>
+  <div class="hero-marquee fade-up d-5">
+    <span>New Delhi</span><span>·</span><span>Ambala</span><span>·</span><span>Ludhiana</span><span>·</span><span>Jammu</span><span>·</span><span>Udhampur</span><span>·</span><span>Katra</span>
+  </div>
+</section>
+
+<!-- INTRODUCTION -->
+<section class="intro" data-testid="home-intro">
+  <div class="container intro-grid">
+    <div appReveal>
+      <p class="eyebrow">The Publication</p>
+      <h2>India, through every journey.</h2>
+    </div>
+    <div appReveal>
+      <p class="lede">Travel Bharat is a premium bilingual onboard magazine celebrating India's destinations, people, businesses, culture, lifestyle, technology and innovation.</p>
+      <p class="body">Curated for today's discerning traveller, each issue is designed to be read slowly — the way the country deserves to be experienced.</p>
+      <a routerLink="/about" class="link-arrow" data-testid="intro-cta">Discover Travel Bharat <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED MAGAZINE -->
+<section class="featured" data-testid="home-featured-issue">
+  <div class="container feat-grid">
+    <div class="cover-wrap image-wrap" appReveal>
+      <img [src]="featuredIssue.cover" [alt]="featuredIssue.title" />
+      <div class="cover-label">
+        <span>Travel Bharat</span>
+        <strong>{{ featuredIssue.number }}</strong>
+      </div>
+    </div>
+    <div class="feat-copy" appReveal>
+      <p class="eyebrow">The Latest Issue</p>
+      <h2>{{ featuredIssue.title }}.</h2>
+      <p class="date">{{ featuredIssue.date }}</p>
+      <div class="rule"></div>
+      <p class="body">Discover stories from across India — from destinations and hospitality to business, technology, culture and lifestyle. Our January edition takes you along the Vande Bharat corridor to the foothills of the Himalayas.</p>
+      <div class="feat-cta">
+        <a routerLink="/magazine" class="btn" data-testid="featured-cta-read">Read Digital Edition</a>
+        <a routerLink="/archives" class="btn ghost" data-testid="featured-cta-archives">View Archives</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="categories" data-testid="home-categories">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <p class="eyebrow">Editorial Verticals</p>
+      <h2>Explore Travel Bharat.</h2>
+    </div>
+    <div class="cat-grid">
+      <a *ngFor="let c of categories; let i = index" routerLink="/blogs" class="cat-card image-wrap" appReveal [attr.data-testid]="'cat-' + c.name.toLowerCase()">
+        <img [src]="c.image" [alt]="c.name" />
+        <div class="cat-overlay"></div>
+        <div class="cat-body">
+          <span class="idx">{{ (i+1).toString().padStart(2,'0') }}</span>
+          <h3>{{ c.name }}</h3>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section class="audience" data-testid="home-audience">
+  <div class="container aud-grid">
+    <div appReveal>
+      <p class="eyebrow">Our Readership</p>
+      <h2 class="big-stat">2,00,000<span>+</span></h2>
+      <p class="stat-label">Monthly Readers</p>
+    </div>
+    <div appReveal>
+      <p class="lede">Connecting brands with a premium business, leisure and travel audience across India's growing premium rail network.</p>
+      <div class="aud-mini">
+        <div><strong>8h+</strong><span>Avg. dwell time per issue</span></div>
+        <div><strong>93%</strong><span>Read-through rate</span></div>
+        <div><strong>Pan-India</strong><span>Expansion roadmap</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why" data-testid="home-why">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <p class="eyebrow">The Case For Travel Bharat</p>
+      <h2>Why brands choose us.</h2>
+    </div>
+    <div class="why-list">
+      <div class="why-row" *ngFor="let w of whys" appReveal>
+        <span class="why-n">{{ w.n }}</span>
+        <h3>{{ w.title }}</h3>
+        <p>{{ w.copy }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LATEST STORIES -->
+<section class="stories" data-testid="home-stories">
+  <div class="container">
+    <div class="section-head split" appReveal>
+      <div>
+        <p class="eyebrow">The Editorial</p>
+        <h2>Latest stories.</h2>
+      </div>
+      <a routerLink="/blogs" class="link-arrow">All Stories <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="story-grid">
+      <a *ngFor="let s of latestStories" [routerLink]="['/blogs', s.slug]" class="story-card" appReveal [attr.data-testid]="'story-' + s.slug">
+        <div class="image-wrap"><img [src]="s.image" [alt]="s.title"/></div>
+        <p class="cat">{{ s.category }}</p>
+        <h3>{{ s.title }}</h3>
+        <p class="ex">{{ s.excerpt }}</p>
+        <div class="meta"><span>{{ s.date }}</span><span class="rm">Read More →</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" data-testid="home-final-cta">
+  <div class="container final-inner" appReveal>
+    <p class="eyebrow" style="color:#E8B77B">For Brands</p>
+    <h2>Take your brand further.</h2>
+    <p>Reach decision-makers where attention matters. Travel Bharat offers uninterrupted, considered exposure inside India's most prestigious semi high-speed services.</p>
+    <div class="cta-row">
+      <a routerLink="/advertise" class="btn light" data-testid="final-cta-advertise">Advertise With Us</a>
+      <a routerLink="/contact" class="btn ghost" style="color:var(--paper); border-color: var(--paper);" data-testid="final-cta-mediakit">Request Media Kit</a>
+    </div>
+  </div>
+</section>

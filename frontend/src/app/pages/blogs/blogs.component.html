@@ -1,0 +1,58 @@
+<section class="page-hero" data-testid="blogs-hero">
+  <div class="container">
+    <p class="eyebrow">The Editorial</p>
+    <h1>Stories from the <em>track</em>.</h1>
+    <p class="sub">Long-form journalism from across India — destinations, culture, business, lifestyle and everything in between.</p>
+  </div>
+</section>
+
+<section class="featured">
+  <div class="container">
+    <a [routerLink]="['/blogs', featured.slug]" class="feat-card" appReveal data-testid="featured-story">
+      <div class="feat-image image-wrap">
+        <img [src]="featured.image" [alt]="featured.title"/>
+      </div>
+      <div class="feat-copy">
+        <p class="eyebrow">Featured · {{ featured.category }}</p>
+        <h2>{{ featured.title }}</h2>
+        <p class="ex">{{ featured.excerpt }}</p>
+        <div class="meta"><span>{{ featured.author }}</span><span>·</span><span>{{ featured.date }}</span><span>·</span><span>{{ featured.readTime }}</span></div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="filters" data-testid="blog-filters">
+  <div class="container">
+    <div class="filter-bar">
+      <button *ngFor="let c of categories"
+              class="fbtn"
+              [class.on]="activeCat() === c"
+              (click)="setCat(c)"
+              [attr.data-testid]="'filter-' + c.toLowerCase()">
+        {{ c }}
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="grid-sec">
+  <div class="container">
+    <div class="story-grid" *ngIf="displayed().length; else empty">
+      <a *ngFor="let s of displayed()" [routerLink]="['/blogs', s.slug]" class="story-card" appReveal [attr.data-testid]="'blog-card-' + s.slug">
+        <div class="image-wrap"><img [src]="s.image" [alt]="s.title"/></div>
+        <p class="cat">{{ s.category }}</p>
+        <h3>{{ s.title }}</h3>
+        <p class="ex">{{ s.excerpt }}</p>
+        <div class="meta"><span>{{ s.date }}</span><span class="rm">Read More →</span></div>
+      </a>
+    </div>
+    <ng-template #empty>
+      <p class="empty">No stories in this category yet — more coming soon.</p>
+    </ng-template>
+
+    <div class="more" *ngIf="hasMore()">
+      <button class="btn ghost" (click)="loadMore()" data-testid="load-more">Load More Stories</button>
+    </div>
+  </div>
+</section>
