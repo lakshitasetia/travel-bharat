@@ -25,13 +25,13 @@ import { CommonModule } from '@angular/common';
           <a routerLink="/about" routerLinkActive="active" data-testid="nav-about">About Us</a>
           <a routerLink="/magazine" routerLinkActive="active" data-testid="nav-magazine">Magazine</a>
           <a routerLink="/advertise" routerLinkActive="active" data-testid="nav-advertise">Advertise With Us</a>
-          <a routerLink="/blogs" routerLinkActive="active" data-testid="nav-blogs">Blogs</a>
-          <a routerLink="/archives" routerLinkActive="active" data-testid="nav-archives">Archives</a>
+          <!-- <a routerLink="/blogs" routerLinkActive="active" data-testid="nav-blogs">Blogs</a> -->
+          <!-- <a routerLink="/archives" routerLinkActive="active" data-testid="nav-archives">Archives</a> -->
           <a routerLink="/contact" routerLinkActive="active" data-testid="nav-contact">Contact Us</a>
         </nav>
 
         <div class="cta-wrap">
-          <a routerLink="/advertise" class="btn small" data-testid="cta-media-kit">Media Kit</a>
+          <!-- <a routerLink="/advertise" class="btn small" data-testid="cta-media-kit">Media Kit</a> -->
           <button class="burger" (click)="toggle()" [attr.aria-expanded]="open()" aria-label="Menu" data-testid="mobile-menu-toggle">
             <span [class.on]="open()"></span>
             <span [class.on]="open()"></span>
@@ -45,8 +45,8 @@ import { CommonModule } from '@angular/common';
         <a routerLink="/about" (click)="close()" data-testid="m-nav-about">About Us</a>
         <a routerLink="/magazine" (click)="close()" data-testid="m-nav-magazine">Magazine</a>
         <a routerLink="/advertise" (click)="close()" data-testid="m-nav-advertise">Advertise With Us</a>
-        <a routerLink="/blogs" (click)="close()" data-testid="m-nav-blogs">Blogs</a>
-        <a routerLink="/archives" (click)="close()" data-testid="m-nav-archives">Archives</a>
+        <!-- <a routerLink="/blogs" (click)="close()" data-testid="m-nav-blogs">Blogs</a> -->
+        <!-- <a routerLink="/archives" (click)="close()" data-testid="m-nav-archives">Archives</a> -->
         <a routerLink="/contact" (click)="close()" data-testid="m-nav-contact">Contact Us</a>
         <a routerLink="/advertise" (click)="close()" class="btn" style="margin-top:1rem" data-testid="m-cta-advertise">Advertise Now</a>
       </div>

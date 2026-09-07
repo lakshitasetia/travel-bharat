@@ -1,93 +1,170 @@
-<section class="page-hero" data-testid="about-hero">
-  <div class="container">
-    <p class="eyebrow">The Publication</p>
-    <h1>About <em>Travel Bharat</em>.</h1>
-    <p class="sub">A new-age onboard reading experience — crafted for the way modern India travels.</p>
-  </div>
-</section>
-
-<section class="intro-block">
-  <div class="container narrow" appReveal>
-    <p class="lede">Travel Bharat is a premium onboard lifestyle and travel magazine designed exclusively for passengers of India's flagship semi high-speed trains.</p>
-    <p class="body">Curated for today's discerning traveller, the magazine blends travel, culture, business, hospitality, technology, automobiles, wellness, and luxury lifestyle into one engaging reading experience.</p>
-    <p class="body">More than just a magazine, Travel Bharat is a platform that celebrates the spirit of modern India — its destinations, innovation, people, and stories — while enhancing the journey experience for rail passengers across the country.</p>
-  </div>
-</section>
-
-<section class="image-break" data-testid="about-image-break">
-  <img src="https://images.unsplash.com/photo-1587922546925-b09b18a01c65?w=2400&q=85" alt="India through the window of a train"/>
-</section>
-
-<section class="vision">
-  <div class="container split">
-    <div appReveal>
-      <p class="eyebrow">Our Vision</p>
-      <h2>A publication that moves with the country.</h2>
+<section class="about-hero" data-testid="about-hero">
+  <div class="container hero-grid">
+    <div class="hero-copy" appReveal>
+      <p class="eyebrow">Travel Bharat</p>
+      <h1>The premium onboard lifestyle magazine of <em>Vande Bharat Express.</em></h1>
+      <p class="hero-lede">Where premium brands meet premium passengers.</p>
+      <p class="body">Travel Bharat is a premium bilingual onboard lifestyle and travel magazine created to enhance the journey experience of passengers travelling on India's prestigious Vande Bharat Express trains.</p>
     </div>
-    <div appReveal>
-      <p class="body">To redefine onboard engagement by creating a sophisticated, informative, and visually rich publication that reflects the aspirations of contemporary India and the evolving experience of rail travel.</p>
-      <blockquote class="pull-quote">Every journey should inspire, inform, and connect the traveller to the stories of the country moving past their window.</blockquote>
-    </div>
-  </div>
-</section>
-
-<section class="distribution">
-  <div class="container">
-    <div class="dist-grid">
-      <div appReveal>
-        <p class="eyebrow">Distribution &amp; Presence</p>
-        <h2>Where we're read.</h2>
-        <p class="body">Travel Bharat is strategically distributed onboard premium train services, ensuring direct access to a focused and high-value audience throughout their journey.</p>
-        <p class="body">Positioned within a distraction-free travel environment, the magazine enjoys extended reader attention and strong engagement.</p>
-        <p class="body">With expansion plans across major premium rail corridors, Travel Bharat is envisioned as one of India's most influential onboard media platforms.</p>
-      </div>
-      <div class="dist-visual" appReveal>
-        <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=1200&q=85" alt="Indian railway"/>
-        <div class="dist-stat">
-          <strong>8h+</strong>
-          <span>Avg. reader dwell time</span>
-        </div>
+    <div class="route-card" appReveal>
+      <p class="route-label">Our first corridor</p>
+      <p class="route-name">New Delhi <span>&harr;</span> Shri Mata Vaishno Devi Katra</p>
+      <div class="route-details">
+        <div><strong>655</strong><span>km</span></div>
+        <div><strong>8:20</strong><span>hours approx.</span></div>
+        <div><strong>22477/78</strong><span>train nos.</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="platform">
-  <div class="container">
-    <div class="section-head" appReveal>
-      <p class="eyebrow">The Advertising Advantage</p>
-      <h2>A powerful advertising platform.</h2>
+<section class="story" data-testid="about-story">
+  <div class="container story-grid">
+    <div class="section-intro" appReveal>
+      <p class="eyebrow">The journey begins</p>
+      <h2>Stories for the way modern India travels.</h2>
     </div>
-    <div class="platform-grid">
-      <p class="body" appReveal>Travel Bharat offers brands a unique opportunity to connect with affluent travellers, corporate professionals, entrepreneurs, tourists, and decision-makers in an immersive and premium setting.</p>
-      <p class="body" appReveal>Unlike conventional media, onboard visibility creates uninterrupted brand exposure, enabling advertisers to engage with readers in a relaxed and attentive environment during travel.</p>
+    <div appReveal>
+      <p class="body">Our journey begins with the New Delhi (NDLS) - Shri Mata Vaishno Devi Katra (SMVDK) Vande Bharat Express, one of the country's most important premium rail corridors connecting the national capital with the gateway to the revered Vaishno Devi pilgrimage.</p>
+      <p class="body">Through a carefully curated mix of travel, tourism, culture, heritage, business, lifestyle, automobiles, technology, wellness, food, inspirational stories, kids and youth stories, Travel Bharat brings an engaging reading experience directly to passengers during their journey.</p>
+      <p class="body">The New Delhi-Katra Vande Bharat service operates as Train Nos. 22477/22478, covering approximately 655 km between New Delhi and Shri Mata Vaishno Devi Katra.</p>
     </div>
   </div>
 </section>
 
-<section class="whys">
+<section class="distribution" data-testid="about-distribution">
   <div class="container">
     <div class="section-head" appReveal>
-      <p class="eyebrow">Why Travel Bharat</p>
-      <h2>Five reasons brands trust us.</h2>
+      <p class="eyebrow">Daily distribution</p>
+      <h2>2,880 magazines. Every day.</h2>
+      <p>New Delhi to Katra and Katra to New Delhi. Every passenger receives a copy. Every day brings new passengers and new readers.</p>
     </div>
-    <ol class="why-list">
-      <li *ngFor="let w of whys; let i = index" appReveal>
-        <span class="n">{{ (i+1).toString().padStart(2,'0') }}</span>
-        <span class="t">{{ w }}</span>
-      </li>
-    </ol>
+    <div class="stat-grid" appReveal>
+      <div class="stat"><strong>2,880</strong><span>new passengers reached daily</span></div>
+      <div class="stat"><strong>75,000</strong><span>copies estimated every month</span></div>
+      <div class="stat"><strong>2,00,000+</strong><span>estimated monthly readers</span></div>
+      <div class="stat"><strong>2-way</strong><span>premium route distribution</span></div>
+    </div>
   </div>
 </section>
 
-<section class="more-than">
+<section class="audience">
+  <div class="container audience-grid">
+    <div appReveal>
+      <p class="eyebrow">A captive audience</p>
+      <h2>A premium environment for meaningful attention.</h2>
+      <p class="body">Unlike conventional print media, Travel Bharat reaches its audience at a unique moment - during their journey. Passengers are seated comfortably for several hours, travelling between major cities and pilgrimage, tourism and business destinations.</p>
+      <p class="body">The New Delhi-Katra journey takes approximately 8 hours 20 minutes on the current schedule, giving the onboard publication substantial journey-time visibility.</p>
+    </div>
+    <div class="audience-list" appReveal>
+      <p class="list-label">Our audience includes</p>
+      <ul>
+        <li>Affluent and aspirational travellers</li>
+        <li>Business owners and entrepreneurs</li>
+        <li>Corporate professionals and decision-makers</li>
+        <li>Tourists and leisure travellers</li>
+        <li>Families and high-value consumers</li>
+        <li>Pilgrims and destination travellers</li>
+        <li>Professionals travelling between Delhi NCR, Punjab and Jammu &amp; Kashmir</li>
+        <li>Passengers from diverse parts of India</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="readership">
+  <div class="container readership-grid">
+    <div class="readership-number" appReveal><span>Beyond</span><strong>circulation</strong></div>
+    <div appReveal>
+      <p class="eyebrow">From circulation to readership</p>
+      <p class="body">A magazine copy can be read by more than one passenger. Most passengers take the magazine with them even after the journey, allowing readership to multiply as copies are shared, browsed and passed among fellow travellers.</p>
+      <p class="body">With every passenger getting a copy every day, Travel Bharat has the potential to generate readership running into lakhs over a sustained monthly and annual cycle.</p>
+      <p class="highlight">This makes Travel Bharat more than a conventional print publication - it is a high-frequency, high-visibility onboard communication platform.</p>
+    </div>
+  </div>
+</section>
+
+<section class="difference">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <p class="eyebrow">Why Travel Bharat is different</p>
+      <h2>A stronger place for brands to be seen and remembered.</h2>
+    </div>
+    <div class="difference-grid">
+      <article appReveal><span>01</span><h3>Premium location</h3><p>Your brand appears inside one of India's most recognisable premium train services.</p></article>
+      <article appReveal><span>02</span><h3>Captive readership</h3><p>Passengers have extended journey time to read, explore and engage with content.</p></article>
+      <article appReveal><span>03</span><h3>Targeted audience</h3><p>Reach travellers with strong purchasing power, business interests and lifestyle aspirations.</p></article>
+      <article appReveal><span>04</span><h3>Repeated exposure</h3><p>Daily circulation creates continuous brand presence across the route.</p></article>
+      <article appReveal><span>05</span><h3>Content-led engagement</h3><p>Advertisements appear alongside professionally curated editorial content.</p></article>
+      <article appReveal><span>06</span><h3>High brand recall</h3><p>A quality magazine inside a premium train creates a distinctive and memorable brand experience.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="connect">
+  <div class="container connect-grid">
+    <div appReveal>
+      <p class="eyebrow">The New Delhi-Katra connect</p>
+      <h2>One route. Multiple markets.</h2>
+    </div>
+    <div appReveal>
+      <p class="body">The route connects New Delhi with Ambala, Ludhiana, Kathua, Jammu Tawi, Martyr Captain Tushar Mahajan (Udhampur) and Shri Mata Vaishno Devi Katra and vice versa.</p>
+      <p class="body">It brings together multiple passenger segments and geographic markets within a single premium travel ecosystem. For brands seeking visibility across Delhi NCR, Haryana, Punjab and Jammu &amp; Kashmir, Travel Bharat provides a highly relevant communication platform.</p>
+    </div>
+  </div>
+</section>
+
+<section class="editorial">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <p class="eyebrow">More than a magazine</p>
+      <h2>Travel. Business. Culture. Lifestyle.</h2>
+      <p>Travel Bharat is designed around the interests and aspirations of the modern Indian traveller.</p>
+    </div>
+    <div class="editorial-grid">
+      <article appReveal><h3>Travel &amp; Tourism</h3><p>Destinations, experiences, hotels, resorts and unexplored India.</p></article>
+      <article appReveal><h3>Culture &amp; Heritage</h3><p>India's history, traditions, art, architecture and cultural diversity.</p></article>
+      <article appReveal><h3>Business &amp; Entrepreneurship</h3><p>Ideas and insights from India's business and entrepreneurial ecosystem.</p></article>
+      <article appReveal><h3>Lifestyle &amp; Luxury</h3><p>Fashion, automobiles, hospitality, luxury experiences and contemporary living.</p></article>
+      <article appReveal><h3>Wellness &amp; Fitness</h3><p>Health-conscious living, wellness destinations, fitness and mindful travel.</p></article>
+      <article appReveal><h3>Food &amp; Hospitality</h3><p>Culinary experiences, regional cuisine, restaurants, hotels and emerging food trends.</p></article>
+      <article appReveal><h3>Technology &amp; Innovation</h3><p>The ideas and innovations shaping the future of India.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="advertisers">
+  <div class="container advertiser-grid">
+    <div appReveal>
+      <p class="eyebrow">A powerful platform for advertisers</p>
+      <h2>Your brand.<br><em>Their journey.</em></h2>
+      <p class="body">Whether you are a national brand, regional business, hotel or resort, tourism organisation, automobile company, bank, financial institution, real estate company, jewellery or luxury brand, hospital, healthcare organisation, educational institution, restaurant, travel company, consumer brand, MSME or FMCG brand, Travel Bharat gives you an opportunity to reach a premium travelling audience in a highly engaging environment.</p>
+    </div>
+    <div class="journey-quote" appReveal>
+      <p>From the moment the passenger boards the train to the time they reach their destination, Travel Bharat remains within the passenger's environment - available to be picked up, browsed, shared and remembered.</p>
+      <span>The power of onboard media.</span>
+    </div>
+  </div>
+</section>
+
+<section class="advantage">
+  <div class="container">
+    <p class="eyebrow">The Travel Bharat advantage</p>
+    <div class="advantage-grid" appReveal>
+      <div><strong>2,880</strong><span>new premium passengers daily</span></div>
+      <div><strong>2-way</strong><span>New Delhi &harr; Katra route</span></div>
+      <div><strong>655 km</strong><span>of premium rail corridor</span></div>
+      <div><strong>8.30+</strong><span>hours of dedicated journey</span></div>
+      <div><strong>Premium</strong><span>captive and targeted passenger audience</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="about-cta">
   <div class="container narrow" appReveal>
-    <p class="eyebrow">More Than A Magazine</p>
-    <h2>Travel Bharat is an experience-led media platform built around the idea that journeys should inspire, inform, and connect people with the stories of India.</h2>
-    <p class="body">Every issue is crafted to make travel more meaningful while offering brands a prestigious space to be seen and remembered.</p>
-    <div class="cta-row">
-      <a routerLink="/advertise" class="btn" data-testid="about-cta-advertise">Advertise With Us</a>
-      <a routerLink="/magazine" class="btn ghost" data-testid="about-cta-magazine">Explore The Magazine</a>
-    </div>
+    <p class="eyebrow">Your brand. Their journey.</p>
+    <h2>Be part of the journey.</h2>
+    <p class="body">Travel Bharat puts meaningful brand visibility inside a premium, captive travel environment.</p>
+    <a routerLink="/advertise" class="btn" data-testid="about-cta-advertise">Advertise With Us</a>
   </div>
 </section>

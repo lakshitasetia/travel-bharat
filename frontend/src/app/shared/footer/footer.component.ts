@@ -41,8 +41,8 @@ import { RouterLink } from '@angular/router';
           <div class="contact-col">
             <h5>Get In Touch</h5>
             <p>Editorial &amp; Advertising</p>
-            <a href="mailto:hello@travelbharat.in">hello&#64;travelbharat.in</a>
-            <a href="tel:+910000000000">+91 00000 00000</a>
+            <a href="mailto:info@travelbharat.org">info&#64;travelbharat.org</a>
+            <a href="tel:+919311134721">+91 9311134721</a>
             <div class="socials">
               <a href="#" aria-label="Instagram" data-testid="social-instagram"><i class="fa-brands fa-instagram"></i></a>
               <a href="#" aria-label="Facebook" data-testid="social-facebook"><i class="fa-brands fa-facebook-f"></i></a>

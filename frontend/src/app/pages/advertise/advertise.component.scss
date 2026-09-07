@@ -5,6 +5,7 @@
     .overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(26,24,21,0.55) 0%, rgba(26,24,21,0.85) 100%); }
   }
   .hero-inner { position: relative; z-index: 2; }
+  .hero-inner .btn { margin-top: 1.5rem; }
   h1 { color: var(--paper); font-size: clamp(3rem, 8vw, 7rem); line-height: 0.95; margin-top: 0.6rem;
     em { font-style: italic; color: #E8B77B; font-weight: 300; } }
   .sub { font-family: var(--font-italic); font-style: italic; font-size: 1.4rem; color: #E8DFCD; margin-top: 1.2rem; }
